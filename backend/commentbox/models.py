@@ -9,7 +9,7 @@ from django.utils import timezone
 class Customer(models.Model):
     name = models.CharField(max_length=60)
     email = models.EmailField(max_length=250)
-    phone = models.CharField(max_length=10)
+    phonenumber = models.CharField(max_length=10)
     comment = models.CharField(max_length=400)
     date = models.DateTimeField(auto_now_add=True)
 

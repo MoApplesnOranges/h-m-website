@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer List</title>
+  </head>
+  <body>
+    <h1>Customer List</h1>
+    {%for customer in customer_list%}
+    <h2>{{customer.name}}</h2>
+    <p>{{customer.email}}</p>
+    <p>{{customer.phone}}</p>
+    <p>{{customer.comment}}</p>
+    <p>{{customer.date}}</p>
+    {%endfor%}
+  </body>
+</html>

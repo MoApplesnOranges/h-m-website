@@ -1,32 +1,21 @@
 import "./App.css";
-import MissionStatement from "./Box";
-import Test from "./Testimonials";
-import Comment from "./Commentbox";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import NavBar from "./NavBar";
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
-      <nav className="nav">
-        <div className="navbar">
-          <ul className="left-nav">
-            <li className="home">Hayden Moore LLC</li>
-          </ul>
-          <ul className="right-nav">
-            <li>About Hayden</li>
-            <li>Contact Me</li>
-            <li>Services</li>
-          </ul>
-        </div>
-      </nav>
-      <header className="App-header">
-        <div className="container">
-          <MissionStatement />
-        </div>
-        <div>
-          <Test />
-          <Comment />
-        </div>
-        <div className="bottom-space"></div>
-      </header>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
       <footer>Copyright 2024</footer>
     </div>
   );
